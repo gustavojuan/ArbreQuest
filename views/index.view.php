@@ -11,6 +11,12 @@
 
         <h1>Listado de árboles</h1>
 
+        <?php
+        if (isset($_GET['success']) && $_GET['success'] == 1) {
+            echo '<p>Felicidades, la operación se realizó exitosamente.</p>';
+        }
+        ?>
+
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-center	">
 
             <?php foreach ($trees as $tree) : ?>
