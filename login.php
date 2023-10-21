@@ -1,37 +1,36 @@
 <?php
 session_start();
-
-// Inicializa el array de errores
 $errors = [];
 
-// Verifica si el formulario ha sido enviado
+/*
+ * Si recibimos el formulario
+ * */
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Recoge los datos del formulario
+
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    // Recoge la contraseña cifrada almacenada en la cookie
+    // Obtenemos el password que tenemos almacenado en la Cookie
     $storedPassword = isset($_COOKIE['password']) ? base64_decode($_COOKIE['password']) : null;
 
-    // Valida el nombre de usuario
+
+    /*TODO: Esto se puede refactorizar a una funcion de validacion*/
     if (empty($username)) {
         $errors['username'] = "El campo de nombre de usuario es obligatorio.";
     }
 
-    // Valida la contraseña
     if (empty($password)) {
         $errors['password'] = "El campo de contraseña es obligatorio.";
     }
 
-    // Si no hay errores de validación, verifica la contraseña
+
     if (empty($errors)) {
-        // Verifica si la contraseña coincide
         if (!password_verify($password, $storedPassword)) {
             $errors['password'] = "Contraseña incorrecta";
         }
     }
 
-    // Si no hay errores de validación ni errores de contraseña, inicia la sesión y redirige al usuario
+   // Si no hay rerrores seteamos session y pasamos a profle
     if (empty($errors)) {
         $_SESSION['user'] = true;
         header('Location: profile.php');
@@ -39,6 +38,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-// Si hubo errores o no se ha enviado el formulario, muestra la página de inicio de sesión con los errores (si los hay)
 require('views/login.view.php');
 ?>
