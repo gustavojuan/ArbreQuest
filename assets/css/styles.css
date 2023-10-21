@@ -1,0 +1,128 @@
+/* Fuentes de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+/* Variables de color */
+:root {
+    --color-text: #131313;
+    --color-aventura-primario: #1E88E5;
+    --color-aventura-secundario: #1565C0;
+    --color-naturaleza-primario: #4CAF50;
+    --color-naturaleza-secundario: #388E3C;
+    --color-familiar-primario: #FF5722;
+    --color-familiar-secundario: #E64A19;
+}
+
+/* Estilos de tipografía */
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--color-text);
+}
+
+.label {
+    font-weight: bold;
+}
+
+/* Estilos de elementos de texto */
+.text-adventure {
+    color: var(--color-aventura-primario);
+}
+
+.text-nature {
+    color: var(--color-naturaleza-primario);
+}
+
+.text-family {
+    color: var(--color-familiar-primario);
+}
+
+/* Estilos para enlaces */
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para botones (Bootstrap 5) */
+.btn {
+    font-weight: 700;
+}
+
+/* Estilos para clases display-1, display-2, etc. */
+.display-1, .display-2, .display-3, .display-5 {
+    font-weight: bold;
+}
+
+.display-1 {
+    font-size: 32px;
+}
+
+.display-2, .display-3 {
+    font-size: 28px;
+}
+
+.display-5 {
+    font-size: 22px;
+    color: var(--color-text);
+}
+
+/* Estilos para formularios */
+.form-control {
+    border: 3px solid var(--color-text);
+}
+
+/* Estilos personalizados para botones */
+.btn {
+    border: 3px solid transparent;
+    border-radius: 1.375rem;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Calibre, sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.125rem;
+    padding: 0.625rem 2rem;
+    text-decoration: none;
+    transition: font-size 0.4s ease-in-out, padding 0.4s ease-in-out;
+}
+
+.btn-primary {
+    border-color: var(--color-text);
+    background-color: #fff;
+    color: var(--color-text);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-text);
+    color: #fff;
+    text-decoration: none;
+    border-color: var(--color-text);
+}
+
+/* Estilos para la barra de navegación (navbar) */
+.navbar {
+    border-bottom: 5px solid var(--color-text);
+}
+
+.navbar a {
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+/* Estilos para el pie de página (footer) */
+footer {
+    border-top: 5px solid var(--color-text);
+}
+
+footer a {
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+/*componenets*/
+
+.card{
+    border: 3px solid var(--color-text);;
+}

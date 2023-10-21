@@ -1,6 +1,8 @@
-<header class="bg-white shadow">
-    <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-        <h1 class="text-3xl font-bold tracking-tight text-gray-900">Árboles Monumentales Provincia València</h1>
+<header>
+    <div class="container">
+        <div class="py-4">
+            <h1 class="display-1">ArbreQuest</h1>
+            <h2 class="display-2">Conquista la Ruta dels Gegants Arboris</h2>
+        </div>
     </div>
 </header>
-

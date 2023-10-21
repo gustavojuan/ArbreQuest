@@ -6,10 +6,8 @@
 
 
 <main>
-    <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
+    <div class="container">
 
-
-        <h1>Listado de árboles</h1>
 
         <?php
         if (isset($_GET['success']) && $_GET['success'] == 1) {
@@ -17,10 +15,12 @@
         }
         ?>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-center	">
+        <div class="row align-itemes-start justify-content-center">
 
             <?php foreach ($trees as $tree) : ?>
-                <?php require('partials/card.php') ?>
+                <div class="col-md-4 mb-3">
+                    <?php require('partials/card.php') ?>
+                </div>
 
             <?php endforeach; ?>
         </div>
