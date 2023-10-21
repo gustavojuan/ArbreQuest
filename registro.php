@@ -27,8 +27,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Si no hay errores de validación, puedes realizar alguna acción, como guardar en la base de datos
     // Si todo está bien, redirige a otra página o muestra un mensaje de éxito
     if (empty($errors)) {
+
+
+        // Cifra el username y el password
+        $password = $_POST['password'];
+        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+
+        $encryptedPassword = base64_encode($hashedPassword); // hashedPassword se refiere a la contraseña cifrada
+
+        // Configura las cookies para username y password con un tiempo de expiración de 60 minutos
+        setcookie('username', $username, time() + 3600, '/');
+        setcookie('password', $encryptedPassword, time() + 3600, '/');
+
+
         // Redirige al usuario a la página principal con un mensaje de felicitación
-        header('Location: /?success=1');
+        header('Location: login.php');
         exit();
     }
 }
