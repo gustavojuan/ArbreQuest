@@ -1,5 +1,5 @@
 <?php
-/*TODO: Esto de abrirs sesiones tantas veces no lo ve claro*/
+/*TODO: Esto de abrir sesiones tantas veces no lo ve claro*/
 session_start();
 
 /*Operador modernete*/

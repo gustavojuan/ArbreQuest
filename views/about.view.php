@@ -3,6 +3,16 @@
 <?php require('partials/nav.php') ?>
 
 <?php require('partials/header.php') ?>
+    <div class="container-fluid">
+
+    <div class="row">
+
+    <div class="col-md-2 order-0">
+        <?php require('partials/aside.php') ?>
+
+    </div>
+
+    <div class="col-md">
 
 
     <main class="container my-5">
@@ -41,4 +51,9 @@
             <p>El proyecto está dirigido a personas de todas las edades interesadas en la naturaleza, la historia y la educación ambiental, así como a aquellos que buscan una experiencia de gamificación educativa.</p>
         </section>
     </main>
-<?php require('partials/footer.php') ?>
+
+
+    </div>
+    </div>
+
+        <?php require('partials/footer.php') ?>

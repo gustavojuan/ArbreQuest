@@ -37,7 +37,7 @@ body {
 
 /* Estilos para enlaces */
 a {
-    color: #007BFF;
+    color: var(--color-text);
     text-decoration: none;
 }
 
@@ -127,9 +127,8 @@ footer a {
     border: 3px solid var(--color-text);;
 }
 
-#aside {
-    width: 250px;
-
-    background-color: tomato;
+aside a {
+    text-decoration: none;
+    color: var(--color-text) !important;
 }
 

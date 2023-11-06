@@ -10,25 +10,13 @@
     <div class="row">
 
         <div class="col-md-2 order-0">
-            <aside >
-                <h3 class="display-3">Filtros</h3>
-                <ul class="list-group">
-                    <li class="list-group-item">An item</li>
-                    <li class="list-group-item">A second item</li>
-                    <li class="list-group-item">A third item</li>
-                    <li class="list-group-item">A fourth item</li>
-                    <li class="list-group-item">And a fifth one</li>
-                </ul>
-            </aside>
+            <?php require('partials/aside.php') ?>
 
         </div>
 
         <div class="col-md">
 
             <main>
-
-
-
                 <?php
                 if (isset($_GET['success']) && $_GET['success'] == 1) {
                     echo '<p>Felicidades, la operación se realizó exitosamente.</p>';
